@@ -1,0 +1,30 @@
+<% include ../partials/genericHead %>
+
+<% if (! locals.user) { %>
+  <!-- IF not signed in -->
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to Membership Website</h1>
+    <% if (locals.dsConfig.multiSourceChooser) { %>
+      <p class="Xlead">Membership Benefits</p>
+    <% } else { %>
+      <p class="Xlead">Membership Benefits</p>
+    <% } %>
+  </div>
+<% } %>
+
+
+<div id="index-page">
+  <p>Member enjoy the following privileges : </p>
+  <ul>
+    <li>Free Something</li>
+  </ul>
+
+  <h4 id="example013"> <a href="eg013">Click here to join</a></h4>
+
+</div>
+
+    <!-- anchor-js is only for the index page -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+<script>anchors.options.placement = 'left'; anchors.add('h4')</script>
+
+<% include ../partials/genericFoot %>

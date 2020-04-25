@@ -1,0 +1,58 @@
+<% include ../partials/genericHead %>
+
+<% if (! locals.user) { %>
+  <!-- IF not signed in -->
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome!</h1>
+    <% if (locals.dsConfig.multiSourceChooser) { %>
+      <p class="Xlead">Welcome to Membership SignUp Page</p>
+    <% } else { %>
+      <p class="Xlead">Welcome to Membership SignUp Page.</p>
+    <% } %>
+  </div>
+<% } %>
+
+
+<div id="index-page">
+  <h2>Please Enter Your Details : </h2>
+  <p>After entering your details in this membership SignUp, you will be presented with a Membership Application form for you to sign. Please sign and submit to complete your application. </p>
+  <form class="eg" action="" method="post" data-busy="form">
+    <div class="form-group">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Your First Name" name="firstName"
+               required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Your Last Name" name="lastName"
+               required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address :</label>
+        <input type="text" class="form-control" id="address" placeholder="Your Address" name="address1"
+               required>
+        <input type="text" class="form-control" id="address1"  name="address2">
+        <input type="text" class="form-control" id="address1"  name="address2">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="Phone No" name="phone"
+               required>
+      </div>
+      <label for="signerEmail">Email Address</label>
+      <input type="email" class="form-control" id="signerEmail" name="signerEmail"
+             aria-describedby="emailHelp" placeholder="pat@example.com" required
+      >
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
+
+    <!-- anchor-js is only for the index page -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+<script>anchors.options.placement = 'left'; anchors.add('h4')</script>
+
+<% include ../partials/genericFoot %>
